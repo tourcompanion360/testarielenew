@@ -23,22 +23,22 @@ export const supabase = {
     auth: {
         signUp: async ({ email, password }: { email: string; password: string }) => {
             console.log('Mock signup:', email);
-            return { data: { user: { id: '1', email } }, error: null };
+            return { data: { user: { id: '1', email } }, error: null as { message: string } | null };
         },
         signInWithPassword: async ({ email, password }: { email: string; password: string }) => {
             console.log('Mock login:', email);
-            return { data: { user: { id: '1', email }, session: { access_token: 'mock-token' } }, error: null };
+            return { data: { user: { id: '1', email }, session: { access_token: 'mock-token' } }, error: null as { message: string } | null };
         },
         signInWithOAuth: async ({ provider }: { provider: string }) => {
             console.log('Mock OAuth:', provider);
-            return { data: { url: '#' }, error: null };
+            return { data: { url: '#' }, error: null as { message: string } | null };
         },
         signOut: async () => {
             console.log('Mock signout');
-            return { error: null };
+            return { error: null as { message: string } | null };
         },
         getSession: async () => {
-            return { data: { session: null }, error: null };
+            return { data: { session: null }, error: null as { message: string } | null };
         },
         onAuthStateChange: (callback: (event: string, session: unknown) => void) => {
             return { data: { subscription: { unsubscribe: () => { } } } };
@@ -47,14 +47,14 @@ export const supabase = {
     from: (table: string) => ({
         select: () => ({
             eq: () => ({
-                single: async () => ({ data: null, error: null }),
+                single: async () => ({ data: null, error: null as { message: string } | null }),
                 data: [],
             }),
             data: [],
         }),
-        insert: async () => ({ data: null, error: null }),
-        update: async () => ({ data: null, error: null }),
-        delete: async () => ({ data: null, error: null }),
+        insert: async () => ({ data: null, error: null as { message: string } | null }),
+        update: async () => ({ data: null, error: null as { message: string } | null }),
+        delete: async () => ({ data: null, error: null as { message: string } | null }),
     }),
 };
 
