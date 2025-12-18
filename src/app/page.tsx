@@ -77,14 +77,13 @@ export default function DashboardPage() {
               transition={{ delay: index * 0.1 }}
             >
               <Card hover={false} className="relative overflow-hidden">
-
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                   <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
                     <stat.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <div className="text-center sm:text-left">
                     <p className="text-2xl font-bold text-white">{stat.value}</p>
-                    <p className="text-sm text-gray-400">{stat.label}</p>
+                    <p className="text-sm text-gray-400 hidden sm:block">{stat.label}</p>
                   </div>
                 </div>
               </Card>
