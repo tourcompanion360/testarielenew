@@ -83,7 +83,7 @@ export default function DashboardPage() {
                   </div>
                   <div className="text-center sm:text-left">
                     <p className="text-2xl font-bold text-white">{stat.value}</p>
-                    <p className="text-sm text-gray-400 hidden sm:block">{stat.label}</p>
+                    <p className="text-sm text-gray-400">{stat.label}</p>
                   </div>
                 </div>
               </Card>
