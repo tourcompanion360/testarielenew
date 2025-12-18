@@ -101,7 +101,7 @@ export function ChatWidget() {
             {/* Chat Button */}
             <motion.button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 transition-shadow"
+                className="fixed bottom-32 md:bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 transition-shadow"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >
@@ -136,7 +136,7 @@ export function ChatWidget() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed bottom-24 right-6 z-50 w-[380px] h-[500px] bg-[#12121e] border border-[#2a2a4a] rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+                        className="fixed bottom-48 md:bottom-24 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] h-[400px] md:h-[500px] bg-[#12121e] border border-[#2a2a4a] rounded-2xl shadow-2xl overflow-hidden flex flex-col"
                     >
                         {/* Header */}
                         <div className="bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 px-4 py-3 border-b border-[#2a2a4a]">
